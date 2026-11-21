@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fbf4ee">
+  <title>Undangan Ngunduh Mantu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Amiri:ital,wght@0,400;0,700;1,400&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Belleza&family=Montserrat:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <!-- Brittany font via local CSS -->
+  <link rel="stylesheet" href="css/style.css?v=3">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="locked">
+  <!-- Desktop Sidebar: Sisi Kiri untuk Layar PC/Laptop (Gambar 2) -->
+  <aside class="desktop-sidebar" aria-hidden="true">
+    <div class="desktop-sidebar-inner">
+      <p class="desktop-sub">UNDANGAN NGUNDUH MANTU</p>
+      <h1 class="desktop-title" data-cfg="coverNames">Arkan &amp; Dyah</h1>
+      <p class="desktop-date" data-cfg="weddingDateText">Minggu, 26 Desember 2026</p>
+    </div>
+  </aside>
+
+  <!-- Mobile Frame Container (Tampilan HP di Tengah saat dibuka di PC/Laptop) -->
+  <div class="mobile-frame">
+    <canvas id="petals"></canvas>
+
+    <!-- COVER -->
+    <section id="cover">
+      <!-- Background -->
+      <div class="cover-bg"></div>
+
+      <!-- Floating hearts -->
+      <div class="hearts-container" aria-hidden="true">
+        <span class="heart h1">♥</span>
+        <span class="heart h2">♥</span>
+        <span class="heart h3">♥</span>
+        <span class="heart h4">♥</span>
+        <span class="heart h5">♥</span>
+      </div>
+
+      <!-- Mempelai kiri (Arkan) -->
+      <div class="cover-person cover-groom">
+        <img src="assets/images/arkan.png" alt="Arkan" class="cover-person-img">
+      </div>
+
+      <!-- Mempelai kanan (Dyah) -->
+      <div class="cover-person cover-bride">
+        <img src="assets/images/dyah.png" alt="Dyah" class="cover-person-img">
+      </div>
+
+      <!-- Konten tengah -->
+      <div class="cover-content">
+        <p class="cover-title fade">Undangan Ngunduh Mantu</p>
+
+        <!-- Countdown pill -->
+        <div class="cover-countdown fade" id="coverCountdown"></div>
+
+        <h1 class="cover-names float"><br>Arkan<span class="amp-sign">&amp;</span>Dyah</h1>
+
+        <div class="cover-divider fade"></div>
+
+        <p class="cover-label fade">Kepada Yth. Bapak/ibu/Saudara/i,</p>
+        <h3 id="guest" class="cover-guest fade">Tamu Undangan</h3>
+        <p class="cover-note fade">Mohon maaf apabila ada kesalahan<br>dalam penulisan nama dan gelar</p>
+
+        <button id="openBtn" class="btn pulse cover-btn">Buka Undangan</button>
+      </div>
+    </section>
+
+    <button id="musicBtn" aria-label="Musik">&#9835;</button>
+    <audio id="bgm" src="assets/music/NCT DREAM - Like We Just Met (inst.).mp3" loop preload="auto"></audio>
+
+    <main id="main" hidden>
+      <!-- Background Pattern Diagonal Sambung Tiap Section (Gambar 1) -->
+      <div class="section-bg-pattern" aria-hidden="true"></div>
+
+      <nav id="nav">
+        <a href="#home" title="Home"><i class="fa-solid fa-house"></i></a>
+        <a href="#couple" title="Mempelai"><i class="fa-solid fa-heart"></i></a>
+        <a href="#event" title="Acara"><i class="fa-solid fa-calendar-days"></i></a>
+        <a href="#gift" title="Gift"><i class="fa-solid fa-gift"></i></a>
+        <a href="#rsvp" title="RSVP"><i class="fa-solid fa-envelope-open"></i></a>
+      </nav>
+
+      <section id="home" class="sec hero">
+        <div class="orn orn-tl"></div>
+        <div class="orn orn-tr"></div>
+        <p class="bismillah reveal">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+        <p class="reveal quote">"Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan
+          untukmu
+          dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa
+          kasih dan sayang." <br><small>(QS. Ar-Rum: 21)</small></p>
+        <p class="reveal">Assalamu’alaikum Warahmatullahi Wabarakatuh<br>
+          Dengan memohon rahmat serta ridho Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk menghadiri
+          acara resepsi pernikahan putra dan putri kami.</p>
+        <br>
+        <br>
+        <h1 class="script reveal float" style="font-family: 'Brittany Signature', cursive;" data-cfg="coverNames"></h1>
+        <p class="reveal" data-cfg="weddingDateText"></p>
+        <div id="countdown" class="reveal"></div>
+      </section>
+
+      <section id="couple" class="sec">
+        <h2 class="script reveal">Mempelai</h2>
+
+        <div class="couple-joint-wrap reveal">
+          <div class="couple-joint-stage">
+            <img src="assets/images/mempelai_pria_wanita.png" alt="Arkan &amp; Dyah" class="couple-joint-img">
+
+            <!-- Informasi Mempelai Pria (Arkan) di bawah karakter Arkan -->
+            <div class="groom-joint-info">
+              <h3 class="couple-name" data-cfg="groomName"></h3>
+              <p class="couple-parents" data-cfg="groomParents"></p>
+              <div>
+                <a href="https://instagram.com/mtharif_" target="_blank" rel="noopener" class="couple-instagram-card"
+                  data-cfg-href="groomIgUrl">
+                  <i class="fa-brands fa-instagram"></i>
+                  <span data-cfg="groomIg">@arkandana25</span>
+                </a>
+              </div>
+              <div class="amp reveal show">&amp;</div>
+            </div>
+          </div>
+
+          <!-- Informasi Mempelai Wanita (Dyah) di bawah karakter Dyah -->
+          <div class="bride-joint-info">
+            <h3 class="couple-name" data-cfg="brideName"></h3>
+            <p class="couple-parents" data-cfg="brideParents"></p>
+            <div>
+              <a href="https://instagram.com/dyahnurisnaini" target="_blank" rel="noopener"
+                class="couple-instagram-card" data-cfg-href="brideIgUrl">
+                <i class="fa-brands fa-instagram"></i>
+                <span data-cfg="brideIg">@dyahnisnaini_</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="event" class="sec">
+        <h2 class="script reveal">Acara</h2>
+        <div class="cards" id="events"></div>
+        <div class="map-wrapper reveal">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5317.079495578922!2d105.23834287613143!3d-5.372234694606604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e40dab5d8b8ddfb%3A0xb2235987d49dad2f!2sLampung%20Museum!5e1!3m2!1sen!2sid!4v1793022245430!5m2!1sen!2sid"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <a id="mapBtn" class="btn reveal" target="_blank" rel="noopener">&#128205; Lihat Lokasi</a>
+      </section>
+
+      <section id="gift" class="sec">
+        <h2 class="script reveal">Wedding Gift</h2>
+        <p class="reveal">Doa restu Anda adalah hadiah terbaik bagi kami. Namun jika ingin memberikan tanda kasih, dapat
+          melalui:</p>
+        <div class="cards" id="bank"></div>
+        <!-- <div class="card reveal" id="addr"></div> -->
+      </section>
+
+      <section id="rsvp" class="sec">
+        <h2 class="script reveal">RSVP &amp; Ucapan</h2>
+        <form id="rsvpForm" class="card reveal">
+          <input name="nama" placeholder="Nama" required>
+          <select name="kehadiran" required>
+            <option value="">Konfirmasi Kehadiran</option>
+            <option>Hadir</option>
+            <option>Tidak Hadir</option>
+          </select>
+          <textarea name="ucapan" rows="4" placeholder="Ucapan &amp; doa"></textarea>
+          <button class="btn" type="submit">Kirim</button>
+          <p id="status"></p>
+        </form>
+        <div id="wishes"></div>
+      </section>
+
+      <!-- SECTION AKHIR / CLOSING -->
+      <section id="closing" class="sec closing-sec">
+        <div class="closing-card reveal">
+          <div class="closing-frame">
+            <img src="assets/images/foto_akhir.png" alt="Arkan &amp; Dyah" class="closing-img">
+          </div>
+
+          <h2 class="closing-title">Terima Kasih</h2>
+
+          <p class="closing-text">
+            Merupakan suatu kebahagiaan dan kehormatan<br>
+            bagi kami, apabila Bapak/ibu/Saudara/i,<br>
+            berkenan hadir dan memberikan do’a restu<br>
+            kepada kami.
+          </p>
+
+          <p class="closing-salam">
+            Wassalamualaikum warahmatullahi wabarakatuh
+          </p>
+
+          <div class="closing-signature">
+            <p class="closing-label">Kami Yang Berbahagia,</p>
+            <h3 class="closing-names" data-cfg="coverNames">Arkan &amp; Dyah</h3>
+            <h2 class="closing-label" style="font-weight: bold;">#ARKANkujagahaDYAHini</h2>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="js/config.js?v=3"></script>
+  <script src="js/main.js?v=3"></script>
+</body>
+
+</html>

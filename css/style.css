@@ -1,0 +1,1344 @@
+/* ===== BRITTANY FONT ===== */
+@font-face {
+  font-family: "Brittany Signature";
+  src: url("https://db.onlinewebfonts.com/t/b4d584ed0e53ba94a815f817690faab2.eot");
+  src: url("https://db.onlinewebfonts.com/t/b4d584ed0e53ba94a815f817690faab2.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/b4d584ed0e53ba94a815f817690faab2.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/b4d584ed0e53ba94a815f817690faab2.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/b4d584ed0e53ba94a815f817690faab2.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/b4d584ed0e53ba94a815f817690faab2.svg#Brittany Signature")format("svg");
+}
+
+/* ===== COLOR PALETTE =====
+   Emerald Green   #0f3d2e
+   Ivory White     #fbf8f1
+   Soft Peach      #f2b8a0
+   Champagne Gold  #c9a24d
+   Natural Green   #587a2f
+*/
+:root {
+  --bg: #fbf8f1;
+  /* Ivory White */
+  --ink: #0f3d2e;
+  /* Emerald Green */
+  --rose: #0f3d2e;
+  /* aksen utama: Emerald */
+  --gold: #c9a24d;
+  /* Champagne Gold */
+  --peach: #f2b8a0;
+  /* Soft Peach */
+  --green: #587a2f;
+  /* Natural Green */
+  --card: #fffdf8d9
+    /* Ivory transparan */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0
+}
+
+html {
+  scroll-behavior: smooth
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  background: var(--bg);
+  color: var(--ink);
+  text-align: center;
+  line-height: 1.7
+}
+
+body.locked {
+  overflow: hidden
+}
+
+.script {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: bold;
+  color: var(--rose)
+}
+
+.bismillah {
+  font-family: 'Amiri', 'Traditional Arabic', serif;
+  font-size: 1.8rem;
+  color: var(--ink);
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+  direction: rtl;
+}
+
+/* Mobile Frame Container */
+.mobile-frame {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0 auto;
+  position: relative;
+  background: #ffffff;
+}
+
+#main {
+  position: relative;
+  background-color: #ffffff;
+  min-height: 100vh;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Background Pattern Diagonal Sambung Tiap Section (Gambar 1) */
+.section-bg-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/images/background_section.png');
+  background-repeat: repeat;
+  background-size: 460px auto;
+  opacity: 0.09;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Desktop Sidebar Hidden by default on Mobile/Tablet */
+.desktop-sidebar {
+  display: none;
+}
+
+h1.script {
+  font-size: clamp(3rem, 12vw, 5.5rem);
+  line-height: 1.1
+}
+
+h2.script {
+  font-size: 3rem;
+  margin-bottom: .5rem
+}
+
+h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem
+}
+
+#petals {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5
+}
+
+.sec {
+  position: relative;
+  padding: 5rem 1.2rem;
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center
+}
+
+.orn {
+  position: absolute;
+  width: min(55vw, 260px);
+  aspect-ratio: 1;
+  opacity: .9;
+  pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='%23c9a24d' stroke-width='1.5'%3E%3Cpath d='M0 0C60 10 110 40 150 110'/%3E%3Cpath d='M0 0C20 50 40 90 90 130'/%3E%3C/g%3E%3Cg fill='%23f2b8a0'%3E%3Ccircle cx='60' cy='38' r='14'/%3E%3Ccircle cx='80' cy='60' r='14'/%3E%3Ccircle cx='45' cy='62' r='14'/%3E%3Ccircle cx='100' cy='90' r='10'/%3E%3C/g%3E%3Ccircle cx='62' cy='52' r='7' fill='%23e3c987'/%3E%3Cg fill='%23587a2f'%3E%3Cellipse cx='120' cy='60' rx='18' ry='7' transform='rotate(35 120 60)'/%3E%3Cellipse cx='30' cy='110' rx='18' ry='7' transform='rotate(70 30 110)'/%3E%3Cellipse cx='130' cy='115' rx='16' ry='6' transform='rotate(60 130 115)'/%3E%3C/g%3E%3C/svg%3E") center/contain no-repeat;
+  animation: sway 6s ease-in-out infinite
+}
+
+.orn-tl {
+  top: 0;
+  left: 0;
+  transform-origin: top left
+}
+
+.orn-tr {
+  top: 0;
+  right: 0;
+  transform: scaleX(-1);
+  transform-origin: top right;
+  animation-name: swayR
+}
+
+.orn-br {
+  bottom: 0;
+  right: 0;
+  transform: rotate(180deg);
+  transform-origin: bottom right;
+  animation-name: swayB
+}
+
+@keyframes sway {
+  50% {
+    transform: rotate(4deg) scale(1.03)
+  }
+}
+
+@keyframes swayR {
+  50% {
+    transform: scaleX(-1) rotate(4deg) scale(1.03)
+  }
+}
+
+@keyframes swayB {
+  50% {
+    transform: rotate(184deg) scale(1.03)
+  }
+}
+
+.float {
+  animation: float 4s ease-in-out infinite
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(-10px)
+  }
+}
+
+#cover {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  padding: 1rem;
+  transition: transform 1.1s ease, opacity 1.1s;
+  overflow: hidden;
+  background: transparent;
+}
+
+#cover.hide {
+  transform: translateY(-100%);
+  opacity: 0
+}
+
+/* Background cover */
+.cover-bg {
+  position: absolute;
+  inset: 0;
+  background: url('../assets/images/background.png') center/cover no-repeat;
+  z-index: 0;
+}
+
+.cover-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(251, 248, 241, .2) 0%, rgba(251, 248, 241, .35) 100%);
+}
+
+/* Couple images */
+.cover-person {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  width: min(42vw, 200px);
+  display: flex;
+  align-items: flex-end;
+}
+
+.cover-groom {
+  left: 0;
+  animation: slideInLeft 1.2s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+.cover-bride {
+  right: 0;
+  animation: slideInRight 1.2s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+.cover-person-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, .15));
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-120%) translateY(30px);
+    opacity: 0
+  }
+
+  to {
+    transform: translateX(0) translateY(0);
+    opacity: 1
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(120%) translateY(30px);
+    opacity: 0
+  }
+
+  to {
+    transform: translateX(0) translateY(0);
+    opacity: 1
+  }
+}
+
+/* Floating hearts */
+.hearts-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.heart {
+  position: absolute;
+  color: #800000;
+  animation: floatHeart linear infinite;
+  opacity: 0;
+  font-size: 1.2rem;
+}
+
+.h1 {
+  left: 18%;
+  top: 15%;
+  font-size: 1rem;
+  animation-duration: 4s;
+  animation-delay: 0s;
+}
+
+.h2 {
+  left: 75%;
+  top: 22%;
+  font-size: 1.4rem;
+  animation-duration: 5s;
+  animation-delay: .8s;
+}
+
+.h3 {
+  left: 60%;
+  top: 10%;
+  font-size: .85rem;
+  animation-duration: 3.5s;
+  animation-delay: 1.4s;
+}
+
+.h4 {
+  left: 32%;
+  top: 25%;
+  font-size: 1.2rem;
+  animation-duration: 4.5s;
+  animation-delay: .3s;
+}
+
+.h5 {
+  left: 82%;
+  top: 35%;
+  font-size: .9rem;
+  animation-duration: 3.8s;
+  animation-delay: 2s;
+}
+
+@keyframes floatHeart {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0
+  }
+
+  10% {
+    opacity: .9
+  }
+
+  80% {
+    opacity: .6
+  }
+
+  100% {
+    transform: translateY(-80px) scale(1.3);
+    opacity: 0
+  }
+}
+
+/* Cover content center */
+.cover-content {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .45rem;
+  padding: 0 1rem;
+  width: 100%;
+  max-width: 340px;
+  text-align: center;
+}
+
+/* Title: Undangan Pernikahan */
+.cover-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 6vw, 2.6rem);
+  /* Ukuran diperbesar */
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: .02em;
+  animation-delay: .2s;
+}
+
+/* Countdown mini pills */
+.cover-countdown {
+  display: flex;
+  gap: .4rem;
+  justify-content: center;
+  animation-delay: .4s;
+}
+
+.cover-countdown .cd-pill {
+  background: #800000;
+  color: #fff;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  box-shadow: 0 3px 8px rgba(15, 61, 46, .35);
+}
+
+/* Couple names dengan efek glow / pendar */
+.cover-names {
+  font-family: 'Brittany Signature', cursive, 'Great Vibes', sans-serif;
+  font-size: clamp(3.8rem, 16vw, 6.5rem);
+  line-height: 1.05;
+  color: var(--ink);
+
+  /* Efek Glow / Text Shadow Berlapis (Natural Green) */
+  text-shadow:
+    0 0 4px rgba(88, 122, 47, 0.4),
+    0 0 10px rgba(88, 122, 47, 0.3),
+    0 0 20px rgba(88, 122, 47, 0.2);
+
+  animation: float 4s ease-in-out infinite;
+}
+
+.amp-sign {
+  font-family: 'Brittany Signature', cursive, 'Great Vibes', sans-serif;
+  font-size: .7em;
+  color: var(--ink);
+
+  /* Efek Glow / Text Shadow Berlapis (Natural Green) */
+  text-shadow:
+    0 0 4px rgba(88, 122, 47, 0.4),
+    0 0 10px rgba(88, 122, 47, 0.3),
+    0 0 20px rgba(88, 122, 47, 0.2);
+  display: block;
+  line-height: .9;
+}
+
+/* Divider */
+.cover-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: .3rem auto;
+  animation-delay: 1s;
+}
+
+/* Guest area */
+.cover-label {
+  font-family: 'Belleza', sans-serif;
+  font-size: .78rem;
+  color: var(--ink);
+  opacity: .8;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  animation-delay: 1.2s;
+}
+
+.cover-guest {
+  font-family: 'Belleza', sans-serif !important;
+  font-size: 1.15rem;
+  color: var(--ink);
+  font-weight: normal;
+  letter-spacing: .02em;
+  background: rgba(255, 253, 248, .75);
+  border-radius: 30px;
+  padding: .35rem 1.4rem;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(201, 162, 77, .35);
+  animation-delay: 1.4s;
+  min-width: 160px;
+}
+
+.cover-note {
+  font-family: 'Belleza', sans-serif;
+  font-size: .7rem;
+  color: var(--ink);
+  opacity: .65;
+  animation-delay: 1.6s;
+  line-height: 1.5;
+}
+
+.cover-btn {
+  animation-delay: 1.8s;
+  margin-top: .5rem;
+  font-family: 'Belleza', sans-serif;
+  letter-spacing: .1em;
+}
+
+.fade {
+  animation: fadeUp 1.2s both
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px)
+  }
+}
+
+.btn {
+  display: inline-block;
+  border: 0;
+  background: var(--rose);
+  color: #fff;
+  padding: .8rem 1.8rem;
+  border-radius: 40px;
+  font: inherit;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 1rem;
+  transition: .3s
+}
+
+.btn:hover {
+  background: var(--gold);
+  transform: translateY(-2px)
+}
+
+.btn.sm {
+  padding: .4rem 1.1rem;
+  font-size: .85rem
+}
+
+.pulse {
+  animation: pulse 2s infinite
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #f2b8a0aa
+  }
+
+  100% {
+    box-shadow: 0 0 0 18px #f2b8a000
+  }
+}
+
+#musicBtn {
+  position: fixed;
+  right: 14px;
+  bottom: 14px;
+  z-index: 60;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 0;
+  background: var(--gold);
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer
+}
+
+#musicBtn.spin {
+  animation: spin 4s linear infinite
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+#nav {
+  position: fixed;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 40;
+  background: var(--card);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  /* Dukungan Safari */
+  padding: 0.6rem 1.2rem;
+  border-radius: 40px;
+  display: flex;
+  gap: 1.25rem;
+  /* Mengatur jarak antar ikon */
+  align-items: center;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+#nav a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 1.15rem;
+  /* Ukuran pas untuk ikon */
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Efek saat ikon disentuh/di-hover atau aktif */
+#nav a:hover,
+#nav a.active {
+  color: var(--green);
+  /* Natural Green */
+  transform: translateY(-3px);
+  /* Efek sedikit melayang ke atas */
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s ease
+}
+
+.reveal.from-left {
+  transform: translateX(-60px)
+}
+
+.reveal.from-right {
+  transform: translateX(60px)
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: none
+}
+
+#countdown {
+  display: flex;
+  gap: .8rem;
+  margin-top: 1.5rem
+}
+
+#countdown div {
+  background: var(--card);
+  border: 1px solid var(--green);
+  border-radius: 12px;
+  padding: .6rem .9rem;
+  min-width: 64px
+}
+
+#countdown b {
+  display: block;
+  font-size: 1.8rem;
+  font-family: 'Belleza', serif
+}
+
+#countdown span {
+  font-size: 1rem
+}
+
+.quote {
+  font-style: italic;
+  max-width: 560px;
+  margin: 1rem auto 2rem
+}
+
+/* Couple Connected Layout (mempelai_pria_wanita.png) */
+.couple-joint-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  margin: 1rem auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.couple-joint-stage {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.couple-joint-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.08));
+}
+
+.groom-joint-info {
+  position: absolute;
+  top: 33.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 100px);
+  max-width: 380px;
+  text-align: center;
+  z-index: 2;
+  padding: 0.3rem 0.5rem;
+}
+
+.bride-joint-info {
+  margin-top: 0.8rem;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  z-index: 2;
+  padding: 0 0.5rem;
+}
+
+.couple-name {
+  font-family: 'Berkshire Swash', serif;
+  color: #800000;
+  white-space: nowrap;
+  font-size: clamp(1.2rem, 5vw, 1.8rem);
+  line-height: 1.25;
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.01em;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.9);
+}
+
+.couple-parents {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.82rem;
+  color: var(--ink);
+  line-height: 1.55;
+  margin: 0 auto;
+  max-width: 320px;
+  background: rgba(255, 253, 248, 0.82);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  padding: 0.35rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid rgba(201, 162, 77, 0.25);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.couple-instagram-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  margin: 0.45rem auto 0.2rem;
+  padding: 0.35rem 0.95rem;
+  background: rgba(255, 253, 248, 0.88);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(201, 162, 77, 0.4);
+  border-radius: 20px;
+  color: var(--ink);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.couple-instagram-card i {
+  color: #c9a24d;
+  font-size: 0.95rem;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.couple-instagram-card:hover {
+  background: #0f3d2e;
+  color: #ffffff;
+  border-color: #0f3d2e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(15, 61, 46, 0.25);
+}
+
+.couple-instagram-card:hover i {
+  color: #f2b8a0;
+  transform: scale(1.15);
+}
+
+.amp {
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 3rem;
+  color: #800000;
+  line-height: 1.1;
+  margin: 0.25rem auto 0;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  margin: 1.5rem 0
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid #c9a24d66;
+  border-radius: 16px;
+  padding: 1.5rem;
+  min-width: 240px;
+  flex: 1;
+  box-shadow: 0 6px 20px #c9a24d33
+}
+
+.num {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  font-weight: 500
+}
+
+/* Bank Card & Logo */
+.bank-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.bank-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  margin-bottom: 0.75rem;
+}
+
+.bank-logo {
+  max-height: 40px;
+  max-width: 140px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.bank-card:hover .bank-logo {
+  transform: scale(1.05);
+}
+
+.bank-card .num {
+  margin: 0.35rem 0;
+  color: var(--ink);
+}
+
+.bank-card .bank-name {
+  font-size: 0.95rem;
+  color: var(--ink);
+  opacity: 0.85;
+  margin-bottom: 1rem;
+}
+
+#addr {
+  max-width: 520px;
+  margin: auto
+}
+
+/* Frame Bingkai Peta (Section Event) */
+.map-wrapper {
+  max-width: 520px;
+  width: 100%;
+  margin: 1.8rem auto 1rem;
+  padding: 8px;
+  background: var(--card);
+  border: 1.5px solid rgba(201, 162, 77, 0.45);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(201, 162, 77, 0.2), 0 2px 6px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+}
+
+.map-wrapper iframe {
+  display: block;
+  width: 100%;
+  height: 280px;
+  border-radius: 14px;
+  border: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  max-width: 520px;
+  margin: 1.5rem auto
+}
+
+input,
+select,
+textarea {
+  padding: .8rem;
+  border: 1px solid #f2b8a0;
+  border-radius: 10px;
+  font: inherit;
+  background: #fff
+}
+
+#wishes {
+  max-width: 520px;
+  margin: auto;
+  max-height: 340px;
+  overflow: auto;
+  text-align: left
+}
+
+.wish {
+  background: var(--card);
+  border-left: 3px solid var(--rose);
+  padding: .8rem 1rem;
+  margin: .6rem 0;
+  border-radius: 8px;
+  animation: fadeUp .6s
+}
+
+/* ===== SECTION AKHIR / CLOSING ===== */
+.closing-sec {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3.5rem;
+  padding-bottom: calc(max(14px, env(safe-area-inset-bottom)) + 5.5rem);
+  position: relative;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.closing-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  margin: auto 0;
+}
+
+/* Lingkaran Avatar Foto Akhir */
+.closing-frame {
+  width: clamp(190px, 52vw, 220px);
+  height: clamp(190px, 52vw, 220px);
+  border-radius: 50%;
+  margin: 0 auto 1.1rem;
+  overflow: hidden;
+  position: relative;
+  background: transparent;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.closing-img {
+  width: 126%;
+  max-width: none;
+  height: auto;
+  margin-top: -14%;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+  filter: drop-shadow(0 4px 12px rgba(15, 61, 46, 0.08));
+}
+
+/* Judul Terima Kasih */
+.closing-title {
+  font-family: 'Berkshire Swash', serif;
+  font-size: clamp(2.2rem, 7vw, 2.7rem);
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.25;
+  margin-bottom: 0.9rem;
+  text-shadow:
+    0 1px 3px rgba(15, 61, 46, 0.25),
+    0 2px 8px rgba(15, 61, 46, 0.18);
+}
+
+/* Teks Paragraf Pesan */
+.closing-text {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(0.94rem, 2.95vw, 1.08rem);
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.65;
+  max-width: 440px;
+  margin: 0 auto 1.1rem;
+  padding: 0 0.5rem;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* Salam Penutup */
+.closing-salam {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(0.94rem, 2.95vw, 1.08rem);
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.5;
+  margin: 0 auto 1.6rem;
+  padding: 0 0.5rem;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* Tanda Tangan */
+.closing-signature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.closing-label {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(1rem, 3vw, 1.15rem);
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+
+.closing-names {
+  font-family: 'Berkshire Swash', serif;
+  font-size: clamp(2.1rem, 6.8vw, 2.6rem);
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.2;
+  text-shadow:
+    0 1px 3px rgba(15, 61, 46, 0.25),
+    0 2px 8px rgba(15, 61, 46, 0.18);
+}
+
+/* ===== RESPONSIVE ===== */
+html {
+  -webkit-text-size-adjust: 100%
+}
+
+body {
+  overflow-x: hidden
+}
+
+img {
+  max-width: 100%
+}
+
+.card {
+  min-width: min(100%, 240px)
+}
+
+input,
+select,
+textarea {
+  font-size: 16px;
+  width: 100%
+}
+
+/* 16px mencegah auto-zoom di iOS */
+.btn,
+#musicBtn,
+#nav a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center
+}
+
+#cover {
+  height: 100vh;
+  height: 100dvh;
+  text-align: center
+}
+
+.hero {
+  min-height: 100vh;
+  min-height: 100svh
+}
+
+#nav {
+  bottom: max(14px, env(safe-area-inset-bottom));
+  max-width: calc(100vw - 80px);
+  overflow-x: auto;
+  scrollbar-width: none
+}
+
+#nav::-webkit-scrollbar {
+  display: none
+}
+
+#musicBtn {
+  bottom: max(14px, env(safe-area-inset-bottom));
+  right: max(14px, env(safe-area-inset-right))
+}
+
+/* Mobile (default sampai 599px) */
+@media (max-width:599px) {
+  .sec {
+    padding: 3.5rem 1rem
+  }
+
+  .orn {
+    width: 42vw
+  }
+
+  h2.script {
+    font-size: 2.5rem
+  }
+
+  #countdown {
+    gap: .4rem
+  }
+
+  #countdown div {
+    min-width: 0;
+    flex: 1;
+    padding: .5rem .3rem
+  }
+
+  #countdown b {
+    font-size: 1.25rem
+  }
+
+  .couple {
+    flex-direction: column;
+    gap: .5rem
+  }
+
+  .photo {
+    width: 170px;
+    height: 215px
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: stretch
+  }
+
+  #nav {
+    gap: .7rem;
+    padding: .3rem .9rem;
+    font-size: .7rem
+  }
+
+  #nav a {
+    min-height: 36px
+  }
+
+  #musicBtn {
+    width: 40px;
+    height: 40px;
+    bottom: calc(max(14px, env(safe-area-inset-bottom)) + 52px)
+  }
+
+  #wishes {
+    max-height: 300px
+  }
+}
+
+/* Badge untuk status Hadir (Natural Green muda) */
+.badge-hadir {
+  background-color: #e3ecd3;
+  color: #2f4a14;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Badge untuk status Tidak Hadir (Soft Peach tua) */
+.badge-tidak-hadir {
+  background-color: #fbe3d8;
+  color: #8a3b1f;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Tablet */
+@media (min-width:600px) and (max-width:1023px) {
+  .sec {
+    padding: 4.5rem 2rem
+  }
+
+  .photo {
+    width: 220px;
+    height: 280px
+  }
+}
+
+/* Desktop / Laptop Screen (Gambar 2: Pinggiran Batik Hijau & Tampilan HP di Tengah) */
+@media (min-width: 1024px) {
+  body {
+    background-color: #0f3d2e;
+    background-image: url('../assets/images/background.png');
+    background-repeat: repeat;
+    background-size: 200px auto;
+    background-attachment: fixed;
+    overflow-y: auto;
+  }
+
+  body.locked {
+    overflow: hidden;
+  }
+
+  /* Sisi Kiri Desktop: Undangan Pernikahan Arkan & Dyah (Gambar 2) */
+  .desktop-sidebar {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: calc((100vw - 460px) / 2);
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    pointer-events: none;
+    padding: 2rem 3rem;
+    box-sizing: border-box;
+  }
+
+  .desktop-sidebar-inner {
+    text-align: center;
+    max-width: 360px;
+    animation: fadeUp 1.2s both;
+  }
+
+  .desktop-sub {
+    font-family: 'Belleza', 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.28em;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+    font-weight: 500;
+  }
+
+  .desktop-title {
+    font-family: 'Brittany Signature', 'Great Vibes', cursive;
+    font-size: clamp(3.2rem, 4.5vw, 4.8rem);
+    color: #ffffff;
+    line-height: 1.15;
+    margin-bottom: 0.8rem;
+    text-shadow:
+      0 0 8px rgba(88, 122, 47, 0.5),
+      0 0 20px rgba(88, 122, 47, 0.3);
+  }
+
+  .desktop-date {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.25em;
+    color: rgba(251, 248, 241, 0.85);
+    font-weight: 400;
+  }
+
+  /* Tampilan Mobile Frame di Tengah */
+  .mobile-frame {
+    max-width: 460px;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+
+  #cover {
+    left: calc(50% - 230px);
+    width: 460px;
+    height: 100vh;
+    height: 100dvh;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.5);
+  }
+
+  #cover .cover-content {
+    gap: 0.35rem;
+    padding: 0 1.2rem;
+  }
+
+  #cover .cover-names {
+    font-size: 3.6rem;
+  }
+
+  #cover .cover-person {
+    width: 175px;
+  }
+
+  #petals {
+    left: calc(50% - 230px);
+    width: 460px;
+  }
+
+  #musicBtn {
+    right: calc(50% - 215px);
+    bottom: 20px;
+  }
+
+  #nav {
+    bottom: 16px;
+    top: auto;
+    max-width: 400px;
+  }
+
+  .sec {
+    max-width: 100%;
+    padding: 4.5rem 1.4rem;
+  }
+
+  .photo {
+    width: 190px;
+    height: 240px;
+  }
+
+  h1.script {
+    font-size: clamp(2.8rem, 8vw, 3.8rem);
+  }
+}
+
+/* Layar landscape pendek (HP diputar) */
+@media (max-height:480px) and (orientation:landscape) {
+  #cover {
+    gap: .2rem;
+    overflow: auto;
+    justify-content: flex-start;
+    padding-top: 1rem
+  }
+
+  #cover h1.script {
+    font-size: 2.5rem
+  }
+
+  .hero {
+    min-height: auto
+  }
+}
+
+/* Hormati pengaturan "kurangi gerakan" */
+@media (prefers-reduced-motion:reduce) {
+  * {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important
+  }
+
+  #petals {
+    display: none
+  }
+}
