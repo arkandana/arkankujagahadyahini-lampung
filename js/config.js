@@ -22,5 +22,5 @@ const CONFIG = {
   giftAddress: "Perumahan Bukit Kemiling Permai Blok Y No. 131 Kel. Kemiling Permai, Kec. Kemiling, Bandar Lampung, Lampung, Indonesia, Kode Pos 35158",
   // giftAddress: "Jalan Candi Sewu No. 6, RT.3/RW.5, Kelurahan Bambankerep (Rumah nomor 6) Kec. Ngaliyan, Kota Semarang, Jawa Tengah, Kode Pos 50182",
   // URL Web App Google Apps Script (lihat README.md)
-  scriptUrl: "https://script.google.com/macros/s/AKfycbwEdxtZDy61phUK6SacNCCWqH7TE6mOJUYF1KmqKT8BtmxjsY5mzB56tPTe8zckGmY/exec?site=lampung"
+  scriptUrl: "https://script.google.com/macros/s/AKfycbwqeJjTiTps5bhRPox49NapfSswKpv3h3NZwurywFWwwfCTo2OxbYFaXVhv2ezR0CYY/exec?site=lampung"
 };
