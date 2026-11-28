@@ -940,28 +940,53 @@ textarea {
 }
 
 /* Lingkaran Avatar Foto Akhir */
+
 .closing-frame {
+
   width: clamp(190px, 52vw, 220px);
+
   height: clamp(190px, 52vw, 220px);
+
   border-radius: 50%;
+
   margin: 0 auto 1.1rem;
+
   overflow: hidden;
+
   position: relative;
+
   background: transparent;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: center;
+
   flex-shrink: 0;
+
 }
 
+
+
 .closing-img {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+
+  width: 126%;
+
   max-width: none;
+
   height: auto;
+
+  margin-top: -14%;
+
   display: block;
+
   pointer-events: none;
+
   user-select: none;
+
   filter: drop-shadow(0 4px 12px rgba(15, 61, 46, 0.08));
+
 }
 
 /* 1. PENGATURAN POSISI & ANIMASI ILUSTRASI
