@@ -964,33 +964,33 @@ textarea {
   filter: drop-shadow(0 4px 12px rgba(15, 61, 46, 0.08));
 }
 
-/* 1. PENGATURAN POSISI & ANIMASI ILUSTRASI */
-.img-ilustrasi {
-  width: 118%;
-  /* Ukuran zoom ilustrasi */
-  margin-top: -10%;
-  /* Posisi atas-bawah ilustrasi */
-  left: 50%;
-  /* Posisi kiri-kanan ilustrasi */
-  z-index: 1;
-  animation: loopIlustrasi 8s ease-in-out infinite;
-}
+/* 1. PENGATURAN POSISI & ANIMASI ILUSTRASI
+/* .img-ilustrasi { */
+/* width: 118%; */
+/* Ukuran zoom ilustrasi */
+/* margin-top: -10%; */
+/* Posisi atas-bawah ilustrasi */
+/* left: 50%; */
+/* Posisi kiri-kanan ilustrasi */
+/* z-index: 1; */
+/* animation: loopIlustrasi 8s ease-in-out infinite; */
+/* } */
 
 /* 2. PENGATURAN POSISI & ANIMASI FOTO ASLI */
-.img-asli {
-  width: 125%;
-  /* Ukuran zoom foto asli */
-  margin-top: 2%;
-  /* Posisi atas-bawah foto asli */
-  left: 50%;
-  /* Posisi kiri-kanan foto asli */
-  z-index: 2;
-  opacity: 0;
-  animation: loopFoto 8s ease-in-out infinite;
-}
+/* .img-asli { */
+/* width: 125%; */
+/* Ukuran zoom foto asli */
+/* margin-top: 2%; */
+/* Posisi atas-bawah foto asli */
+/* left: 50%; */
+/* Posisi kiri-kanan foto asli */
+/* z-index: 2; */
+/* opacity: 0; */
+/* animation: loopFoto 8s ease-in-out infinite; */
+/* } */
 
 /* Ilustrasi menghilang total saat foto asli tampil */
-@keyframes loopIlustrasi {
+/* @keyframes loopIlustrasi {
 
   0%,
   35% {
@@ -1006,10 +1006,10 @@ textarea {
   100% {
     opacity: 1;
   }
-}
+} */
 
 /* Foto asli muncul saat ilustrasi menghilang */
-@keyframes loopFoto {
+/* @keyframes loopFoto {
 
   0%,
   35% {
@@ -1025,7 +1025,7 @@ textarea {
   100% {
     opacity: 0;
   }
-}
+}  */
 
 /* Judul Terima Kasih */
 .closing-title {
